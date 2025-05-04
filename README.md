@@ -1,24 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# かわつる三芳野団地 公式ウェブサイト
 
-## Getting Started
+モダンで高齢者にも優しいレスポンシブウェブサイトです。Next.js、TypeScript、Tailwind CSSを使用して構築されています。
 
-First, run the development server:
+## 特徴
+
+- **モダンなデザイン**: 最新のUI/UXトレンドに基づいたデザイン
+- **アクセシビリティ**: 高齢者にも見やすく使いやすいインターフェース
+- **レスポンシブ**: スマートフォン、タブレット、PCなど様々なデバイスに対応
+- **高速表示**: Next.jsによる高速なページロード
+- **MicroCMS対応**: 後々コンテンツ管理にMicroCMSを使用することを想定した設計
+
+## 技術スタック
+
+- [Next.js](https://nextjs.org/) - Reactフレームワーク
+- [TypeScript](https://www.typescriptlang.org/) - 型安全な開発
+- [Tailwind CSS](https://tailwindcss.com/) - ユーティリティファーストCSSフレームワーク
+- [MicroCMS](https://microcms.io/) - ヘッドレスCMS（将来的に連携予定）
+
+## 開発環境のセットアップ
 
 ```bash
+# リポジトリをクローン
+git clone https://your-repository-url/miyoshino.git
+cd miyoshino
+
+# 依存パッケージをインストール
+npm install
+
+# 開発サーバーを起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+開発サーバーは http://localhost:3000 で起動します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## MicroCMS連携（将来的な実装）
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+このプロジェクトは、後々MicroCMSとの連携を予定しています。
+
+### 設定手順（実装時）
+
+1. MicroCMSアカウントを作成し、APIキーを取得
+2. `.env.local`ファイルを作成し、MicroCMS接続情報を追加
+   ```
+   NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN=your-service-domain
+   MICROCMS_API_KEY=your-api-key
+   ```
+3. MicroCMS SDKをインストール
+   ```
+   npm install microcms-js-sdk
+   ```
+4. `src/libs/microcms.ts`内のコメントアウトされたコードを適宜有効化
+
+## コンテンツタイプ（MicroCMS用）
+
+以下のコンテンツタイプを作成する予定：
+
+- **ニュース**: お知らせやブログ記事
+- **サービス**: 提供サービスの詳細
+- **会社情報**: 会社概要やスタッフ紹介
+
+## ビルドと本番デプロイ
+
+```bash
+# 本番用ビルド
+npm run build
+
+# 本番サーバー起動
+npm start
+```
+
+## ライセンス
+
+このプロジェクトは[MITライセンス](LICENSE)の下で公開されています。
 
 ## Learn More
 
