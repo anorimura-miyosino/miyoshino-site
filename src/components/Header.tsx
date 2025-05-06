@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Button from "./Button";
 import { Kosugi_Maru } from "next/font/google";
+//import { useRouter } from "next/router";
 
 const kosugiMaru = Kosugi_Maru({ subsets: ["latin"], weight: ["400"] });
 
@@ -52,6 +53,11 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  //const router = useRouter();
+  //const imageUrl = `${router.basePath}/hero-image.jpg`;
+  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX;
+  const imageUrl = `${assetPrefix}hero-image.jpg`;
+
   return (
     <>
       {/* ランディングページ用ヘッダー */}
@@ -62,7 +68,7 @@ const Header = () => {
           left: 0,
           width: "100%",
           height: "100vh",
-          backgroundImage: "url('/hero-image.jpg')",
+          backgroundImage: `url('${imageUrl}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    NEXT_PUBLIC_ASSET_PREFIX: "/miyoshino-site/", // assetPrefix と同じ値を設定
+  },
 
   // trailingSlash: true, // お好みでページのURLの末尾にスラッシュを付けるかどうか
 };
