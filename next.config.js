@@ -1,12 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  // GitHub Pagesのため、リポジトリ名がURL一部になる場合の設定
-  // basePath: '/miyoshino-site', // リポジトリ名をここに指定（必要な場合のみコメントを外す）
-  // GitHub Pagesでの画像読み込みのための設定
+  // リポジトリ名が URL に入る GitHub Pages 用の設定
+  basePath: "/miyoshino-site", // ここはあんたのリポジトリ名に変えてくれ
+  assetPrefix: "/miyoshino-site/", // 上と同じリポジトリ名にスラッシュを付けたもの
+
+  output: "export", // next export を使うんで、こいつが必須だ
+
+  // GitHub Pages で next/image を使うなら、画像の最適化をオフにするのが無難
   images: {
     unoptimized: true,
   },
+
+  // trailingSlash: true, // お好みでページのURLの末尾にスラッシュを付けるかどうか
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
