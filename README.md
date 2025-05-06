@@ -1,21 +1,21 @@
 # かわつる三芳野団地 公式ウェブサイト
 
-モダンで高齢者にも優しいレスポンシブウェブサイトです。Next.js、TypeScript、Tailwind CSSを使用して構築されています。
+モダンで高齢者にも優しいレスポンシブウェブサイトです。Next.js、TypeScript、Tailwind CSS を使用して構築されています。
 
 ## 特徴
 
-- **モダンなデザイン**: 最新のUI/UXトレンドに基づいたデザイン
+- **モダンなデザイン**: 最新の UI/UX トレンドに基づいたデザイン
 - **アクセシビリティ**: 高齢者にも見やすく使いやすいインターフェース
-- **レスポンシブ**: スマートフォン、タブレット、PCなど様々なデバイスに対応
-- **高速表示**: Next.jsによる高速なページロード
-- **MicroCMS対応**: 後々コンテンツ管理にMicroCMSを使用することを想定した設計
+- **レスポンシブ**: スマートフォン、タブレット、PC など様々なデバイスに対応
+- **高速表示**: Next.js による高速なページロード
+- **MicroCMS 対応**: 後々コンテンツ管理に MicroCMS を使用することを想定した設計
 
 ## 技術スタック
 
-- [Next.js](https://nextjs.org/) - Reactフレームワーク
+- [Next.js](https://nextjs.org/) - React フレームワーク
 - [TypeScript](https://www.typescriptlang.org/) - 型安全な開発
-- [Tailwind CSS](https://tailwindcss.com/) - ユーティリティファーストCSSフレームワーク
-- [MicroCMS](https://microcms.io/) - ヘッドレスCMS（将来的に連携予定）
+- [Tailwind CSS](https://tailwindcss.com/) - ユーティリティファースト CSS フレームワーク
+- [MicroCMS](https://microcms.io/) - ヘッドレス CMS（将来的に連携予定）
 
 ## 開発環境のセットアップ
 
@@ -33,25 +33,25 @@ npm run dev
 
 開発サーバーは http://localhost:3000 で起動します。
 
-## MicroCMS連携（将来的な実装）
+## MicroCMS 連携（将来的な実装）
 
-このプロジェクトは、後々MicroCMSとの連携を予定しています。
+このプロジェクトは、後々 MicroCMS との連携を予定しています。
 
 ### 設定手順（実装時）
 
-1. MicroCMSアカウントを作成し、APIキーを取得
-2. `.env.local`ファイルを作成し、MicroCMS接続情報を追加
+1. MicroCMS アカウントを作成し、API キーを取得
+2. `.env.local`ファイルを作成し、MicroCMS 接続情報を追加
    ```
    NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN=your-service-domain
    MICROCMS_API_KEY=your-api-key
    ```
-3. MicroCMS SDKをインストール
+3. MicroCMS SDK をインストール
    ```
    npm install microcms-js-sdk
    ```
 4. `src/libs/microcms.ts`内のコメントアウトされたコードを適宜有効化
 
-## コンテンツタイプ（MicroCMS用）
+## コンテンツタイプ（MicroCMS 用）
 
 以下のコンテンツタイプを作成する予定：
 
@@ -71,7 +71,7 @@ npm start
 
 ## ライセンス
 
-このプロジェクトは[MITライセンス](LICENSE)の下で公開されています。
+このプロジェクトは[MIT ライセンス](LICENSE)の下で公開されています。
 
 ## Learn More
 
