@@ -1,0 +1,6 @@
+{
+  "public": "out",
+  "rewrites": [
+    { "source": "^/miyoshino\\-site/?$", "destination": "/index.html" }
+  ]
+}
